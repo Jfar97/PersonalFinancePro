@@ -1,0 +1,1750 @@
+:root {
+  --main-color: #0bcdd7;
+  --secondary-color: #3f0373;
+}
+
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url('./assets/BackgroundImage2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, Times, serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title Bar Styles */
+.titleBar {
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.titleBar2 {
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.titleBar h1 {
+  color: white;
+  font-size: 3.0em;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.titleBar p {
+  color: white;
+  font-size: 0.9em;
+  margin: 5px 0 0;
+  padding: 0;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+/* NAVBAR STYLES */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, Times, serif;
+  top: 110px;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a, .navbar button {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.navbar a:hover, .navbar button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+/* Solo Navbar Styles */
+.solonavbar {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  font-family: Georgia, Times, serif;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.solonavbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.solonavbar li {
+  margin: 0 10px;
+}
+
+.solonavbar a, .solonavbar .nav-button {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  height: auto;
+}
+
+.solonavbar a:hover, .solonavbar .nav-button:hover,
+.solonavbar a:focus, .solonavbar .nav-button:focus {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.solonavbar .nav-button {
+  outline: none;
+}
+
+.solonavbar a.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.main-content {
+  padding-top: 100px; /* Adjust this value based on the combined height of the title bar and navbar */
+  width: 100%;
+}
+
+/* LOGIN AND REGISTER FORM STYLES */
+.auth-box {
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px; /* Adjust if needed */
+  align-items: center;
+}
+
+.auth-box-register {
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+
+.auth-box-register h2 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.auth-box-login {
+  display: flex;
+  flex-direction: column; /* Ensure children stack vertically */
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  width: 400px;
+  margin-top: 40px; /* Adjust if needed */
+}
+
+.auth-box-login h2 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.auth-box-login label {
+  width: 100%; /* Ensure labels take up the full width */
+  text-align: left; /* Align text to the left */
+  margin-top: 10px;
+}
+
+
+.auth-box-login input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px; /* Space between label and input */
+  border: 1px solid #ccc; /* Thin border */
+  border-radius: 20px; /* Rounded border */
+  outline: none;
+}
+
+.auth-box-login button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  align-items: center;
+  border: 2px solid black; /* Black border** */
+  border-radius: 20px; /* Rounded border** */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  outline: none;
+}
+
+.auth-box-login button:hover,
+.auth-box-login button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: center;
+  border: 1px solid #ccc; /* **ADDED: Thin border** */
+  border-radius: 20px; /* **ADDED: Rounded border** */
+  outline: none;
+}
+
+.formContainer input:focus {
+  border-color: black; /* Change border color on focus** */
+  box-shadow: 0 0 5px rgb(42, 3, 115); /* Add a subtle purple glow** */
+}
+
+.loginRegister-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Georgia, Times, serif;
+  color: white;
+}
+
+
+.loginRegister-input:focus {
+  border-bottom-color: #000;
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  align-items: center;
+  border: 2px solid black; /* Black border** */
+  border-radius: 20px; /* Rounded border** */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  outline: none;
+}
+
+
+.formContainer button:hover,
+.formContainer button:focus {
+  background-color: black;
+  color: white;
+  border-color: black; /* Change border color on hover/focus */
+}
+
+
+/* BUDGET CARD STYLES */
+.homepage-container {
+  display: flex; /* NEW CODE HERE: Use flexbox to place containers side by side */
+  width: 100%;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 60px auto; /* Center the entire container on the page */
+  font-family: Georgia, Times, serif;
+}
+
+/* New container for the entire homepage */
+.homepage-container-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 120px auto;
+  gap: 20px;
+  font-family: Georgia, Times, serif;
+}
+
+/* Container for the top row (recurring charges and recent expenses) */
+.top-row-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Styles for recurring charges and recent expenses containers */
+.recurring-charges-container {
+  flex: 1;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recent-expenses-container {
+  flex: 1;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* New styles for budgets container */
+.budgets-container-new {
+  width: 100%;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 1155px;
+}
+
+/* New styles for savings container */
+.savings-container-new {
+  width: 100%;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 1155px;
+}
+
+/* Styles for headers in all containers */
+.recurring-charges-container h2,
+.recent-expenses-container h2,
+.budgets-container-new h1,
+.savings-container-new h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+
+
+/* New container for savings cards */
+.savings-card-container-new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .top-row-container {
+    flex-direction: column;
+  }
+}
+
+.charges-container {
+  display: flex; /* Use flexbox to place containers side by side */
+  width: 100%;
+  justify-content: center; /* Align containers to the left */
+  max-width: 1200px;
+  margin: 60px auto; /* Center the entire container on the page */
+}
+
+.savings-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 65%; /* Increase the width */
+  max-width: 1200px;
+  margin: 120px 0 60px 0;
+}
+
+.homepage-container-budgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: Georgia, Times, serif;
+  width: 65%;
+  max-width: 1200px;
+  margin: 60px 0 60px 0;
+}
+
+.homepage-container-budgets h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.homepage-container-budgets button {
+  border: 2px solid black; /* Black border */
+}
+
+.homepage-container-budgets button:hover,
+.homepage-container-budgets button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+/* Changes to .homepage-container-charges */
+.homepage-container-charges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: Georgia, Times, serif;
+  width: 65%; /* Increase the width */
+  max-width: 1200px;
+  margin: 60px 20px 60px 0; /* Add margin to the right */
+}
+
+.homepage-container-charges h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.homepage-container-charges button {
+  border: 2px solid black; /* Black border */
+}
+
+.homepage-container-budgets button:hover,
+.homepage-container-budgets button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue ouctline */
+}
+
+.budget-card {
+  width: 200px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  position: relative;
+  background-image: linear-gradient(white, white),
+  linear-gradient(to right, var(--main-color), var(--secondary-color));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.budget-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.budget-card-container-centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.budget-header {
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+}
+
+.budget-body {
+  padding: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+
+}
+
+.budget-progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.budget-progress {
+  height: 20px;
+  background-image: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+
+.homepage-container-expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  font-family: Georgia, Times, serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 120px 0 60px 20px;
+}
+
+.homepage-container-expenses h2 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* PAGE CONTAINER STYLES */
+.page-container {
+  width: 100%;
+  padding-top: 200px; /* Space for the title and navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-container-register {
+  width: 100%;
+  padding-top: 50px; /* Space for the title and navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-container-login {
+  width: 100%;
+  padding-top: 10px; /* Space for the title and navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* CONTENT BOX STYLES */
+.budget-form {
+  display: flex;
+  flex-direction: column; /* Stack the inputs vertically */
+  align-items: center; /* Center align the inputs */
+  width: 100%;
+}
+.content-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.content-box h2 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.content-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  align-items: center;
+  border: 2px solid black; /* Black border** */
+  border-radius: 20px; /* Rounded border** */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  outline: none;
+}
+
+.content-box button:hover, .content-box button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+.budget-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Georgia, Times, serif;
+  color: white;
+  padding: 10px;
+}
+
+
+.budget-input:focus {
+  border-bottom-color: #000;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .budget-card {
+    width: 90%; /* Percentage width for responsiveness */
+  }
+}
+
+/* SAVINGS CARD STYLES */
+.savings-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  font-family: Georgia, Times, serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 65%; /* Increase the width */
+  max-width: 1200px;
+  margin: 120px 20px 60px 0;
+}
+
+.savings-card-container h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.savings-card {
+  width: 200px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  position: relative;
+  background-image: linear-gradient(white, white),
+  linear-gradient(to right, #36ff36, #006400);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.savings-header {
+  background: linear-gradient(to right, #36ff36, #006400);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+}
+
+.savings-body {
+  padding: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.savings-progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.savings-progress {
+  height: 20px;
+  background-image: linear-gradient(to right, #36ff36, #006400);
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .savings-card {
+    width: 90%;
+  }
+}
+
+.add-expense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+  height: 310px;
+  max-height: 310px;
+}
+
+.add-expense-header {
+  display: inline-block;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bordered-placed-holder-header {
+  display: inline-block;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Text border effect */
+  -webkit-text-stroke: 1px black;
+  text-stroke: 2px black;
+}
+
+
+.add-expense-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow inputs to wrap if they don't fit in a row */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.add-expense-label {
+  flex: 1;
+  min-width: 150px; /* Restore original min-width */
+  margin-right: 10px; /* Space between label and input */
+}
+
+#add-expense-input, #BudgetId {
+  flex: 2;
+  width: auto; /* Allow input to take up available space */
+  margin-bottom: 10px; /* Space between rows */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 1px solid black;
+
+  margin-left: 0; /* Move closer to the label */
+  margin-top: 10px; /* Move down more */
+}
+
+/* Add margin below the select input to create space between it and the button */
+#BudgetId {
+  margin-right: 60px; /* Adjust this value as needed for desired spacing */
+}
+
+/* Add space between the two inputs */
+.add-expense-form #add-expense-input + #BudgetId {
+  margin-top: 10px; /* Space between the two inputs */
+}
+#add-expense-input {
+  margin-right: 10px; /* Add space to the right of the first input */
+}
+
+.expenses-container {
+  padding: 100px 20px 20px;
+}
+
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Stretch items to take full height */
+  border: 2px solid var(--secondary-color); /* Same border as budget cards */
+  border-radius: 8px; /* Same border radius as budget cards */
+  background-color: #ffffff; /* Same background color as budget body */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Same shadow as budget cards */
+  margin-bottom: 10px; /* Space between items */
+  margin-top: 10px;
+  padding: 10px; /* Padding inside each item */
+  position: relative; /* Needed for pseudo-elements */
+  width: 80%
+}
+
+.expense-item span {
+  flex: 1; /* Make each span take up equal space */
+  text-align: center; /* Center text within each column */
+  padding: 0 10px; /* Add padding between fields */
+  position: relative; /* Needed for pseudo-elements */
+}
+
+.expense-item span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px; /* Border width */
+  background-color: var(--secondary-color); /* Border color */
+}
+
+.expense-item .delete-button,
+.charge-item .delete-button {
+  background-color: #fd4c4c;
+  border: 2px solid darkred;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expense-item .delete-button:hover,
+.charge-item .delete-button:hover {
+  background-color: darkred;
+  border: 2px solid darkred;
+  color: white;
+}
+
+.expense-item .delete-button svg,
+.charge-item .delete-button svg {
+  fill: black;
+  transition: all 0.3s ease;
+}
+
+.expense-item .delete-button:hover svg,
+.charge-item .delete-button:hover svg {
+  fill: white;
+}
+
+@media (max-width: 600px) {
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expense-item span {
+    width: 100%;
+    text-align: left; /* Align text to the left on small screens */
+    margin-bottom: 5px; /* Space between rows */
+    border-right: none; /* Remove the border on small screens */
+    border-bottom: 2px solid var(--secondary-color); /* Add bottom border on small screens */
+  }
+
+  .expense-item span:last-child {
+    border-bottom: none; /* Remove the bottom border from the last span */
+  }
+
+  .expense-item span:not(:last-child)::after {
+    display: none; /* Remove pseudo-element on small screens */
+  }
+}
+
+.expense-item button {
+  margin-left: 10px; /* Add margin to the left of the button */
+  align-self: center; /* Center the button vertically */
+}
+
+.expense-item[style*="borderColor"] {
+  border-color: inherit !important;
+  background-color: inherit !important;
+}
+
+
+.charge-item {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  --event-color: var(--secondary-color); /* Default color, will be overridden */
+  border: 2px solid var(--event-color);
+}
+
+.charge-item span {
+  flex: 1; /* Make each span take up equal space */
+  text-align: center; /* Center text within each column */
+  padding: 0 10px; /* Add padding between fields */
+  position: relative; /* Needed for pseudo-elements */
+}
+
+.charge-item span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px; /* Border width */
+  background-color: var(--event-color); /* Border color */
+}
+
+.charge-item button {
+  margin-left: 10px; /* Add margin to the left of the button */
+  align-self: center; /* Center the button vertically */
+}
+
+@media (max-width: 600px) {
+  .charge-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .charge-item span {
+    width: 100%;
+    text-align: left; /* Align text to the left on small screens */
+    margin-bottom: 5px; /* Space between rows */
+    border-right: none; /* Remove the border on small screens */
+    border-bottom: 2px solid var(--secondary-color); /* Add bottom border on small screens */
+  }
+
+  .charge-item span:last-child {
+    border-bottom: none; /* Remove the bottom border from the last span */
+  }
+
+  .charge-item span:not(:last-child)::after {
+    display: none; /* Remove pseudo-element on small screens */
+  }
+}
+
+.charge-item button {
+  margin-left: 10px; /* Add margin to the left of the button */
+  align-self: center; /* Center the button vertically */
+
+}
+
+.charge-item[style*="borderColor"] {
+  border-color: inherit !important;
+  background-color: inherit !important;
+}
+
+/* New styles for the color guide */
+.color-guide-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 5px;
+}
+
+.color-guide-item {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+
+.color-guide-item span:first-child {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .color-guide-container {
+    justify-content: center;
+  }
+}
+
+.delete-button {
+  background-color: #fd4c4c; /* Red background */
+  border: 2px solid darkred;
+  color: black; /* White text */
+  padding: 5px 10px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: darkred; /* Darker red on hover */
+  border: 2px solid darkred;
+  color: white;
+}
+
+.delete-button svg {
+  fill: black; /* Change the color of the trash icon to white */
+  transition: all 0.3s ease;
+  vertical-align: bottom;
+}
+
+.delete-button:hover svg {
+  fill: white; /* Change the color of the trash icon to white */
+}
+
+.recent-expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recent-expense-list li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.recent-expense-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-container {
+  margin: 100px auto;
+  max-width: 1100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the calendar header */
+.fc-header-toolbar {
+  margin-bottom: 1.5em !important;
+}
+
+/* Style the day cells */
+.fc-daygrid-day {
+  background-color: #ffffff;
+}
+
+.fc-daygrid-day-top {
+height: 30px; /* Adjust height of the day number area to allow more space */
+}
+
+.fc-daygrid-day-frame {
+min-height: 80px; /* Ensure a minimum height for day cells */
+}
+
+/* Style the event dots */
+.fc-event-dot {
+  border: 1px solid #ffffff;
+}
+
+/* Style the event content */
+.fc-event-title, .fc-event-time {
+  color: #ffffff;
+  padding: 2px;
+  font-size: 0.9em;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Improve readability of day numbers */
+.fc-daygrid-day-number {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Style today's date */
+.fc-day-today {
+  background-color: rgba(11, 205, 215, 0.1) !important;
+  border: 2px solid transparent !important;
+  background-image:
+          linear-gradient(to right, #0bcdd7, #3f0373) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+}
+
+.fc-day-today .fc-daygrid-day-number,
+.fc-day-today .fc-col-header-cell-cushion,
+.fc-timegrid-axis-cushion.fc-scrollgrid-shrink-cushion,
+.fc-timegrid-slot-label-cushion.fc-scrollgrid-shrink-cushion,
+.fc-day-today .fc-timegrid-col-frame {
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* Ensure text is readable on all backgrounds */
+.fc-event-title, .fc-event-time {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.fc-col-header-cell-cushion {
+  color: black !important;  /* Set the color to black */
+}
+
+.submit-button {
+  display: inline-block; /* Ensure the link is treated like a button */
+  text-align: center; /* Center the text inside the link */
+  padding: 10px;
+  margin: 0 0 20px;
+  align-items: center;
+  border: 2px solid black; /* Black border */
+  border-radius: 20px; /* Rounded border */
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline from link */
+  outline: none;
+}
+
+.submit-button:hover, .submit-button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+.frequency-group {
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+.frequency-group h2 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.submit-button-centered {
+  display: inline-block; /* Ensure the link is treated like a button */
+  text-align: center; /* Center the text inside the link */
+  padding: 10px;
+  margin: 20px 50px 0 0;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+.submit-button:hover, .submit-button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+.add-budget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+  height: 230px;
+  max-height: 230px;
+}
+
+.add-budget-header {
+  display: inline-block;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+
+}
+
+.add-budget-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow inputs to wrap if they don't fit in a row */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.add-budget-label {
+  flex: 1;
+  min-width: 150px; /* Restore original min-width */
+  margin-right: 10px; /* Space between label and input */
+}
+
+#add-budget-input, #BudgetId {
+  flex: 2;
+  width: auto; /* Allow input to take up available space */
+  margin-bottom: 10px; /* Space between rows */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 1px solid black;
+
+  margin-left: 0; /* Move closer to the label */
+  margin-top: 10px; /* Move down more */
+}
+
+/* Add margin below the select input to create space between it and the button */
+#BudgetId {
+  margin-right: 60px; /* Adjust this value as needed for desired spacing */
+}
+
+/* Add space between the two inputs */
+.add-budget-form #add-budget-input + #BudgetId {
+  margin-top: 10px; /* Space between the two inputs */
+}
+#add-budget-input {
+  margin-right: 10px; /* Add space to the right of the first input */
+}
+
+.add-charge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+  height: 400px;
+  max-height: 400px;
+  max-height: 400px;
+}
+
+.add-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+  height: 390px;
+  max-height: 390px;
+}
+
+.add-button {
+  border: 2px solid black; /* Black border */
+  margin: 10px 20px 0;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover,
+.add-button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+.centered-add-button {
+  border: 2px solid black; /* Black border */
+  margin: 20px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.centered-add-button:hover,
+.centered-add-button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
+
+.upcoming-charge-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upcoming-charge-list li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
+
+.homepage-container-savings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: Georgia, Times, serif;
+  width: 65%;
+  max-width: 1200px;
+  margin: 60px 0 60px 0;
+  height: 700px;
+  max-height: 700px;
+}
+
+.homepage-container-savings h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.add-expense-to-budget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+  height: 520px;
+  max-height: 520px;
+}
+
+.modify-savings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  max-width: 1200px;
+  margin: 60px 0 60px 20px;
+}
+
+.charge-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.charge-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Adjust the ul styles if you're using one */
+.charge-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage-container-budgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: Georgia, Times, serif;
+  width: 65%;
+  max-width: 1200px;
+  margin: 60px 0 60px 0;
+}
+
+.auth-box-change {
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 55px;
+  margin-top: 70px;
+}
+
+
+.auth-box-change h2 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: left;
+  border-radius: 5px;
+
+  /* Gradient text color */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.delete-account-button {
+  background-color: #fd4c4c; /* Red background */
+  border: 2px solid darkred;
+  color: black; /* White text */
+  padding: 5px 10px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 167px;
+  height: 40px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.delete-account-button:hover {
+  background-color: darkred; /* Darker red on hover */
+  border: 2px solid darkred;
+  color: white;
+}
+
+.delete-account-button svg {
+  fill: black; /* Change the color of the trash icon to white */
+  transition: all 0.3s ease;
+  vertical-align: bottom;
+}
+
+.delete-account-button:hover svg {
+  fill: white; /* Change the color of the trash icon to white */
+}
+
+.fc-button-primary {
+  background-color: white !important;
+  border: 2px solid black !important;
+  color: black !important;
+  transition: all 0.3s ease !important;
+}
+
+.fc-button-primary:hover,
+.fc-button-primary:focus {
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+  outline: none !important;
+}
+
+/* Today button */
+.fc-today-button {
+  background-color: white !important;
+  border-color: black !important;
+  color: black !important;
+}
+
+.fc-today-button:hover,
+.fc-today-button:focus {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+/* Active state for view buttons */
+.fc-button-active {
+  background-image: linear-gradient(to right, var(--main-color), var(--secondary-color)) !important;
+  border-color: black !important;
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Improve contrast for day numbers and header text */
+.fc-daygrid-day-number,
+.fc-col-header-cell-cushion {
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.fc .fc-toolbar-title {
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.reset-budget-button {
+  border: 2px solid black; /* Black border */
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.reset-budget-button:hover,
+.reset-budget-button:focus {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: black; /* Black border on hover */
+  outline: none; /* Remove blue outline */
+}
