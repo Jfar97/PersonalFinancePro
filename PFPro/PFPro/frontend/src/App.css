@@ -280,8 +280,8 @@ body, html, #root {
   padding: 10px;
   margin-top: 20px;
   align-items: center;
-  border: 2px solid black; /* Black border** */
-  border-radius: 20px; /* Rounded border** */
+  border: 2px solid black; /* Black border */
+  border-radius: 20px; /* Rounded border */
   background-color: white;
   color: black;
   cursor: pointer;
@@ -308,8 +308,8 @@ body, html, #root {
   padding: 10px;
   margin: 10px 0;
   align-items: center;
-  border: 1px solid #ccc; /* **ADDED: Thin border** */
-  border-radius: 20px; /* **ADDED: Rounded border** */
+  border: 1px solid #ccc; /* Thin border** */
+  border-radius: 20px; /* Rounded border** */
   outline: none;
 }
 
