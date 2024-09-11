@@ -9,21 +9,21 @@ import backgroundImage from './assets/BackgroundImage2.jpg';
 import Homepage from "./pages/Homepage.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
-import CreateBudget from "./components/CreateBudget.jsx";
 import Expenses from "./pages/Expenses.jsx";
 import BudgetPage from "./pages/BudgetPage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import RecurringChargesPage from "./pages/RecurringChargesPage.jsx";
+import SavingsPage from "./pages/SavingsPage.jsx";
+import IndividualSavingsPage from "./pages/IndividualSavingsPage.jsx";
+import AllBudgets from "./pages/AllBudgets.jsx";
+import AccEventsPage from "./pages/AccEventsPage.jsx";
 
 // Component imports
 import ChangePassword from "./components/ChangePassword.jsx";
 import ForgotPassword from "./components/ForgotPassword.jsx";
 import Navigation from "./components/Navigation.jsx";
 import RecChargesCalendar from "./components/RecChargesCalendar.jsx";
-import SavingsPage from "./pages/SavingsPage.jsx";
-import IndividualSavingsPage from "./pages/IndividualSavingsPage.jsx";
-import AllBudgets from "./pages/AllBudgets.jsx";
-import AccEventsPage from "./pages/AccEventsPage.jsx";
+import CreateBudget from "./components/CreateBudget.jsx";
 
 function CalendarWrapper() {
     const location = useLocation();
