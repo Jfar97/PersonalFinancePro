@@ -1,9 +1,5 @@
 # PersonalFinancePro
-A fullstack personal finance app written using a stack of Reactjs, Nodejs, Express, and mySQL
-
-Project Overview
-
-PFPro is a fullstack personal finance management application uniquely crafted to fulfill the specific features and control I desired in a finance app that I couldn’t find in existing applications. Designed to streamline the management of budgets, expenses, savings, recurring charges, and financial events, PFPro combines these elements into one intuitive platform, giving users the tailored experience I envisioned for personal finance management.
+Personal Finance Pro, or PFP, is a fullstack personal finance management application uniquely crafted to fulfill the specific features and control I desired in a finance app that I couldn’t find in existing applications. Designed to streamline the management of budgets, expenses, savings, recurring charges, and financial events, PFPro combines these elements into one intuitive platform, giving users the tailored experience I envisioned for personal finance management.
 
 Tech Stack
 - Frontend: React.js
