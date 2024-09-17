@@ -1,4 +1,4 @@
-# PersonalFinancePro
+# Personal Finance Pro
 Personal Finance Pro, or PFPro, is a fullstack personal finance management application uniquely crafted to fulfill the specific features and control I desired in a finance app that I couldn’t find in existing applications. Designed to streamline the management of budgets, expenses, savings, recurring charges, and financial events, PFPro combines these elements into one intuitive platform, giving users the tailored experience I envisioned for personal finance management. This project was developed over the period of a month, serving as a practical learning experience in fullstack development, the javascript language, and the application of newly acquired programming skills and frameworks.
 
 Tech Stack
