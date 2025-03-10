@@ -1,6 +1,22 @@
 # Personal Finance Pro
 Personal Finance Pro, or PFPro, is a fullstack personal finance management application uniquely crafted to fulfill the specific features and control I desired in a finance app that I couldn’t find in existing applications. Designed to streamline the management of budgets, expenses, savings, recurring charges, and financial events, PFPro combines these elements into one intuitive platform, giving users the tailored experience I envisioned for personal finance management. This project was developed over the period of a month, serving as a practical learning experience in fullstack development, the javascript language, and the application of newly acquired programming skills and frameworks.
 
+
+## TECHNICAL SKILLS IMPLEMENTED
+
+- **Full CRUD Operations**: Create, Read, Update, and Delete across key entities (Users, Budgets, Expenses, etc.)
+- **RESTful API Development**: Node.js + Express routes designed for clear client–server communication
+- **Database Management & Relational Modeling**: MySQL with Sequelize ORM for migrations, schema design, and complex relationships
+- **Authentication & Authorization**: JWT-based workflow with secure user registration, login, and password recovery
+- **Complex State Management**: Multi-layer React state handling with context/hooks (or Redux, if used)
+- **Responsive UI Design**: Adaptive layouts that scale across desktop and mobile devices
+- **Data Visualization**: Charts and progress bars to present financial metrics at a glance
+- **Date & Time Handling**: Accurate scheduling and calculations for recurring events
+- **Asynchronous Programming**: Use of Promises and async/await for seamless, non-blocking operations
+- **Form & Input Validation**: Both client-side and server-side checks to ensure data integrity
+- **Error Handling**: Robust exception handling across backend and frontend layers
+
+
 Tech Stack
 - Frontend: React.js
 - Backend: Node.js with Express.js
